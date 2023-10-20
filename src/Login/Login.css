@@ -1,0 +1,188 @@
+.submit_btn{
+    width: 176px; 
+    height: 36px; 
+    left: 200px; 
+    top: 0px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    background: #3579F6; 
+    border-radius: 10px;
+    border:None;
+    cursor: pointer; 
+}
+
+.reset_btn{
+    width: 176px; 
+    height: 36px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    background: rgba(255,0,0, 1);
+    border-radius: 10px;
+    border:None;
+    cursor: pointer; 
+}
+
+.reset_btn:hover{
+    background-color:rgba(200, 0, 0, 1);
+    color:white;
+}
+
+.submit_btn:hover{
+    background-color:rgba(35,85,202, 1);
+    color:white;
+}
+
+.button_area{
+    margin-top: 10px;
+    width: 400px; 
+    height: 36px;
+    position: relative;
+}
+
+.label{
+    align-self: stretch; 
+    color: #52525C; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    line-height: 24px; 
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.form-control{
+    align-self: stretch; 
+    padding-left: 16px; 
+    padding-right: 16px; 
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    border: 2px #D9D9D9 solid; 
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 8px; 
+    display: inline-flex;
+    color: black; 
+    font-size: 15px; 
+    font-family: Inter;
+    font-weight: 400; 
+    line-height: 24px;
+    word-wrap: break-word;
+    width:342px;
+    position: relative;
+    height:18px;
+}
+
+.select-control{
+    padding-left: 16px; 
+    padding-right: 16px; 
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    background: white; 
+    border-radius: 8px; 
+    border: 2px #D9D9D9 solid; 
+    gap: 8px; 
+    color: rgba(125,125,125, 1); 
+    font-size: 15px; 
+    font-family: Inter;
+    font-weight: 400; 
+    line-height: 24px;
+    width:376px;
+    position: relative;
+}
+
+.form_area{
+    height: 85px; 
+    flex-direction: column; 
+    display: inline-flex;
+    width:450px;
+    position: relative;
+}
+
+.password_input{
+    height:50px;
+}
+
+.fa-eye{
+    position: relative;
+    left:-30px;
+    top:0px;
+    cursor: pointer;
+    color: lightgray;
+}
+
+.areyouanewmember{
+    color: #808080;
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+.link{
+    color: #3F8AE2; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+a{
+    text-decoration:none;
+    color:#2190FF;
+}
+
+a:hover{
+    color:rgba(35,85,202, 1);
+}
+
+.AreYouANewMemberSignUpHere{
+    width: 376px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.LoginText{
+    text-align: center; 
+    color: black; 
+    font-size: 36px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    width: 376px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.LoginPane{
+    width: 480px;
+    height: 640px;
+    top:20px;
+    left:20px;
+    position: absolute;
+}
+.ForgotPassword{
+    text-align: center; 
+    color: #808080; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    word-wrap: break-word;
+    width: 400px; 
+    margin-top:40px;
+}

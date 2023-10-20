@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Sign_Up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+<div class="SignUpPane">
+      <div class="SignUpText">Sign Up</div>
+      <div class="AlreadyAMemberLogin"><span class="alreadyamember">Already a member? <a href="../Login/Login.html">Login</a></span></div>
+      <form>
+      <div class="form_area">
+        <label class="label" for="role">Role</label>
+      <select id="role" required name="role" type="role" class="select-control">
+        <option value="" disabled selected>Please Choose...</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+      </select>
+      </div>
+      <div class="form_area">
+        <label class="label" for="name">Name</label>
+        <input autocomplete="off" type="name" name="name" id="name" required class="form-control" placeholder="Enter your name" />
+      </div>   
+      <div class="form_area">
+        <label class="label" for="phone">Phone</label>
+        <input autocomplete="off" type="tel" name="phone" id="phone" required class="form-control" placeholder="Enter your phone number" />
+      </div>
+      <div class="form_area">
+        <label class="label" for="email">Email</label>
+        <input autocomplete="off" type="email" name="email" id="email" required class="form-control" placeholder="Enter your email" />
+      </div>
+      <div class="form_area">
+        <label class="label" for="password">Password</label>
+        <div class="password_input">
+        <input autocomplete="none" type="password" name="password" id="password" required class="form-control" placeholder="Enter your password" /><i class="far fa-eye" id="togglePassword"></i>
+        </a>
+      </div>
+      
+        
+      <div class="button_area">
+        <button type="reset" class="reset_btn">Reset</button>
+        <button type="submit" class="submit_btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

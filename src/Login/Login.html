@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+<div class="LoginPane">
+      <form>
+      <div class="LoginText">Login</div>
+      <div class="AreYouANewMemberSignUpHere">
+        <span class="areyouanewmember">Are you a new member? <a href="../Sign_Up/Sign_Up.html">Sign Up Here</a></span>
+      </div>
+      
+      <div class="form_area">
+        <label class="label" for="email">Email</label>
+        <input autocomplete="off" type="email" name="email" id="email" required class="form-control" placeholder="Enter your email" />
+      </div>
+      <div class="form_area">
+        <label class="label" for="password">Password</label>
+        <div class="password_input"> 
+        <input autocomplete="none" type="password" name="password" id="password" required class="form-control" placeholder="Enter your password" /><i class="far fa-eye" id="togglePassword"></i>
+        </div>
+      </div>
+      <div class="button_area">
+        <button type="reset" class="reset_btn">Reset</button>
+        <button type="submit" class="submit_btn">Submit</button>
+      </div>
+      </form>
+      <div class="ForgotPassword">Forgot Password?</div>
+  </div>
+</body>
+</html>
