@@ -1,6 +1,7 @@
 import './Navbar.css'
 
 function Navbar(){
+    const isLogedOut = false;
     return(
 <div className="e1_3">
     <a href="/" className="e1_16">StayHealthy</a>
@@ -16,19 +17,26 @@ function Navbar(){
     <li className="link"><a href="#">Appointments</a></li>
     <li className="link"><a href="#">Health Blog</a></li>
 </ul>
-
-<div className="e26_461">
+{isLogedOut?
+(<div><div className="e26_461">
     <a href="/Sign_Up">
         <button className="ei26_461_1_6">Sign Up</button>
     </a>
 </div>
-       
 <div className="e40_620">
     <a href="/Login">
         <button className="ei26_461_1_6">Login</button>
     </a>
+</div></div>) : (
+    <div className="e26_461">
+    <a href="#">
+        <button className="ei26_461_1_6">Logout</button>
+    </a>
+</div>)
+}
+
 </div>
-</div>
+
 
     );
 }
