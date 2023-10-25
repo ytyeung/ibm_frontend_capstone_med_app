@@ -11,14 +11,14 @@ function Navbar(){
     </svg>
 
 <ul className="nav_links">
-    <li className="link"><a href="../Landing_Page/LandingPage.html">Home</a></li>         
+    <li className="link"><a href="/">Home</a></li>         
     <li className="link"><a href="#">Reviews</a></li>
     <li className="link"><a href="#">Appointments</a></li>
     <li className="link"><a href="#">Health Blog</a></li>
 </ul>
 
 <div className="e26_461">
-    <a href="../Sign_Up/Sign_Up.html">
+    <a href="/Sign_Up">
         <button className="ei26_461_1_6">Sign Up</button>
     </a>
 </div>
