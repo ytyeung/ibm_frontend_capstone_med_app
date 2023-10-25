@@ -57,16 +57,16 @@
 
 
 
-ul {
+.hero-section ul {
     list-style: none;
 }
 
-a {
+.hero-section a {
     text-decoration: none;
     color: #333;
 }
 
-h1,
+.hero-section h1,
 h2 {
     line-height: 1.3;
     margin: 15px 0;
@@ -74,7 +74,7 @@ h2 {
 
 
 
-button {
+.hero-section button {
     transition: all 0.5s ease-in-out;
     font-size: 1em;
     padding: 1em;
@@ -84,7 +84,7 @@ button {
 }
 
 
-.button:hover {
+.hero-section .button:hover {
     transform: scale(0.98);
 }
 

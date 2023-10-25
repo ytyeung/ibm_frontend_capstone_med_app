@@ -24,7 +24,7 @@ function Navbar(){
 </div>
        
 <div className="e40_620">
-    <a href="../Login/Login.html">
+    <a href="/Login">
         <button className="ei26_461_1_6">Login</button>
     </a>
 </div>

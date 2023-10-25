@@ -13,7 +13,8 @@
     background: #3579F6; 
     border-radius: 10px;
     border:None;
-    cursor: pointer; 
+    cursor: pointer;
+    padding: 0 0;
 }
 
 .reset_btn{
@@ -31,7 +32,8 @@
     background: rgba(255,0,0, 1);
     border-radius: 10px;
     border:None;
-    cursor: pointer; 
+    cursor: pointer;
+    padding: 0 0;
 }
 
 .reset_btn:hover{
@@ -82,27 +84,9 @@
     font-weight: 400; 
     line-height: 24px;
     word-wrap: break-word;
-    width:342px;
-    position: relative;
-    height:18px;
-}
-
-.select-control{
-    padding-left: 16px; 
-    padding-right: 16px; 
-    padding-top: 12px; 
-    padding-bottom: 12px; 
-    background: white; 
-    border-radius: 8px; 
-    border: 2px #D9D9D9 solid; 
-    gap: 8px; 
-    color: rgba(125,125,125, 1); 
-    font-size: 15px; 
-    font-family: Inter;
-    font-weight: 400; 
-    line-height: 24px;
     width:376px;
     position: relative;
+    height:48px;
 }
 
 .form_area{
@@ -114,13 +98,13 @@
 }
 
 .password_input{
-    height:50px;
+    height:30px;
 }
 
-.fa-eye{
+.LoginPane .fa-eye{
     position: relative;
     left:-30px;
-    top:0px;
+    top: 0px;
     cursor: pointer;
     color: lightgray;
 }
@@ -133,7 +117,7 @@
     word-wrap: break-word;
 }
 
-.link{
+.LoginPane .link{
     color: #3F8AE2; 
     font-size: 16px; 
     font-family: Inter; 
@@ -141,12 +125,12 @@
     word-wrap: break-word;
 }
 
-a{
+.LoginPane a{
     text-decoration:none;
     color:#2190FF;
 }
 
-a:hover{
+.LoginPane a:hover{
     color:rgba(35,85,202, 1);
 }
 
@@ -172,9 +156,10 @@ a:hover{
 .LoginPane{
     width: 480px;
     height: 640px;
-    top:20px;
+    top:85px;
     left:20px;
     position: absolute;
+    z-index:-1;
 }
 .ForgotPassword{
     text-align: center; 
