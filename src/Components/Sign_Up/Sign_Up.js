@@ -71,7 +71,6 @@ const Sign_Up = () => {
       <div className="form_area">
         <label className="label" for="phone">Phone (10 digits)</label>
         <input type="tel" required pattern="[0-9]{10}" name="phone" id="phone" className="form-control" autocomplete="off"  placeholder="Enter your phone number" value={phone} onChange={(e) => setPhone(e.target.value)} aria-describedby="helpId"/>
-        </div>
       </div>
       <div className="form_area">
         <label className="label" for="email">Email (name@example.com)</label>
