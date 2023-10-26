@@ -43,6 +43,11 @@ const Login = () => {
     }
   };
 
+  const resetForm = () => {
+    setPassword("");
+    setEmail("");
+  }
+
     return(    
     <div className="LoginPane">
       <form onSubmit={login}>
@@ -62,7 +67,7 @@ const Login = () => {
         </div>
       </div>
       <div className="button_area">
-        <button type="reset" className="reset_btn">Reset</button>
+        <button type="reset" className="reset_btn" onClick={resetForm}>Reset</button>
         <button type="submit" className="submit_btn">Submit</button>
       </div>
       </form>
