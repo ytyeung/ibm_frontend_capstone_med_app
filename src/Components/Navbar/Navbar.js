@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 function Navbar(){
     const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
@@ -10,12 +10,13 @@ function Navbar(){
         sessionStorage.removeItem("name");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("phone");
-        navigate("/");   //on directing to home page you need to give logic to change login and signup buttons with name of the user and logout button where you have implemented Navbar functionality
+        
+        return redirect("/");
     }
 
     let name = "";
 
-    if (isLogedOut==false){
+    if (isLogedOut===false){
         name = sessionStorage.getItem("email").toString().split('@');
         name = name[0];
     }
