@@ -77,13 +77,15 @@
 }
 
 .e1_3 .name_tag { 
-	width:140px;
-	height:36px;
+	width:120px;
+	height:75px;
 	position:absolute;
+    justify-content: center;
+    align-items: center;
     display: flex;
 	right: 160px;
     font-size:16px;
-	top:29px;
+	top:0px;
 }
 
 .e1_3 a{
