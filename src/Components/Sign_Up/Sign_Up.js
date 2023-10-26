@@ -61,8 +61,6 @@ const Sign_Up = () => {
     }
 
 
-    
-
     return(
       <div className="SignUpPane" style={{marginTop:'5%'}}>
       {showerr && <div className="err" style={{ color: 'red' }}>{JSON.stringify(showerr)}</div>}

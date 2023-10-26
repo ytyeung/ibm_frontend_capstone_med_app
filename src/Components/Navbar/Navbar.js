@@ -3,7 +3,6 @@ import { redirect } from 'react-router-dom';
 
 function Navbar(){
     const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
-    const navigate = useNavigate();
 
     const logOutMe = () => {
         sessionStorage.removeItem("auth-token");
