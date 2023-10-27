@@ -34,6 +34,7 @@ function Navbar(){
     <li className="link"><a href="#">Reviews</a></li>
     <li className="link"><a href="#">Appointments</a></li>
     <li className="link"><a href="#">Health Blog</a></li>
+    <li className="link"><a href="/instant-consultation">Instant Consultation</a></li>
 </ul>
 {isLogedOut?
 (<div><div className="e26_461">
