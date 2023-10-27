@@ -13,6 +13,8 @@ const Sign_Up = () => {
 
     const navigate = useNavigate();
 
+
+
     const register = async (e) => {
         e.preventDefault();
 
@@ -47,7 +49,11 @@ const Sign_Up = () => {
                     setShowerr(error.msg);
                 }
             } else {
-                setShowerr(json.error);
+                let msg = "";
+                for (const error of json.error){
+                    msg = msg + "\n" + error.msg.replace('"','');
+                }
+                setShowerr(msg.trim());
             }
         }
     };
@@ -60,10 +66,13 @@ const Sign_Up = () => {
         setRole("");
     }
 
+    const displayError = showerr.split('\n').map((x) => <li>{x}</li>);
+    
+
 
     return(
       <div className="SignUpPane" style={{marginTop:'5%'}}>
-      {showerr && <div className="err" style={{ color: 'red' }}>{JSON.stringify(showerr)}</div>}
+      {showerr && <div className="err" style={{ color: 'red' }}><ul>{displayError}</ul></div>}
       <div className="SignUpText">Sign Up</div>
       <div className="AlreadyAMemberLogin"><span className="alreadyamember">Already a member? <a href="/Login">Login</a></span></div>
       <form method="POST" onSubmit={register}>
