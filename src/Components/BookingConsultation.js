@@ -61,7 +61,9 @@ const BookingConsultation = () => {
     return (
         <center>
             <div className="searchpage-container">
+            <center>
             <FindDoctorSearch onSearch={handleSearch} />
+            </center>
             <div className="search-results-container">
             {isSearched && (
                 <center>

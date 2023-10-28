@@ -1,7 +1,7 @@
 .searchpage-container {
-    max-width: 1200px;
+    max-width: 1024px;
     margin: auto;
-    margin-top:10%;
+    margin-top:80px;
     color: #414146;
     padding: 0 20px;
     position: static;
@@ -9,6 +9,15 @@
 }
 .searchpage-container img {
     max-width: 100%;
+}
+.search-results-container{
+    top: 350px;
+    max-width: 1024px;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    margin-left: auto;
+    margin-right: auto;
 }
 .search-results-container .doctorcard{
     display:flex;
@@ -19,7 +28,6 @@
     padding: 18px;
     border-radius: 4px;
     background-color: #fff;
-
 }
 
 .search-results-container>h2 {
