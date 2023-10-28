@@ -63,7 +63,7 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
               <button className="close" onClick={close}>
                 &times;
               </button>
-              <div style={{backgroundColor:'white'}}>
+              <div className="doctor-card">
                 <div className="doctor-card-profile-image-container">
                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/> </svg>
                 </div>
@@ -82,7 +82,11 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
                     <div className="bookedInfo" key={appointment.id}>
                       <p>Name: {appointment.name}</p>
                       <p>Phone Number: {appointment.phoneNumber}</p>
-                      <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
+                      <p>Date: {appointment.selectedDate}</p>
+                      <p>Time: {appointment.selectedSlot}</p>
+                      <center>
+                          <button onClick={() => handleCancel(appointment.id)} style={{marginTop:'20px'}}>Cancel Appointment</button>
+                      </center>
                     </div>
                   ))}
                 </>

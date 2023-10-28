@@ -207,3 +207,14 @@ button:hover {
     height:30px;
     color: black;
   }
+
+  .doctor-card{
+    background-color: white;
+    border: 2px solid;
+  }
+
+  .bookedInfo{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
