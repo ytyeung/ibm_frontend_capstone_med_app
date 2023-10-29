@@ -28,7 +28,7 @@
     top: 40px;
     left: 0;
     width: 100%;
-    z-index: 5;
+    /*z-index: 5;*/
     margin-top: 2px;
     border: 1px solid #555;
 }
@@ -117,7 +117,7 @@
     top: 55%;
     left: 0;
     width: 100%;
-    z-index: 5;
+    /*z-index: 5;*/
     height: 420px;
     margin-top: 2px;
     border: 1px solid #555;

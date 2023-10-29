@@ -39,9 +39,19 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
         setAppointments(updatedAppointments);
         setShowModal(false);
 
-        let doctorData = {'name': name, 'speciality': speciality};
+        const doctorData = {'name': name, 'speciality': speciality};
+        const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
+        let updatedDoctorData = [];
 
-        localStorage.setItem('doctorData',JSON.stringify(doctorData));
+        if (storedDoctorData){
+            if (!storedDoctorData.includes(doctorData)){
+                updatedDoctorData = [...storedDoctorData, doctorData];
+            }
+        }else{
+            updatedDoctorData =[doctorData];
+        }
+
+        localStorage.setItem('doctorData',JSON.stringify(updatedDoctorData));
         localStorage.setItem(name,JSON.stringify(newAppointment));
 
         window.location.reload();
