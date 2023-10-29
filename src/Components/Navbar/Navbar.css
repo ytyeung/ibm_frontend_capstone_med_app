@@ -6,6 +6,7 @@
 	left:0px;
 	top:0px;
     display: flex;
+    z-index:99;
 }
 
 .doctor_svg{

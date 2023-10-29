@@ -5,12 +5,13 @@ import Landing_Page from './Components/Landing_Page/Landing_Page';
 import Sign_Up from './Components/Sign_Up/Sign_Up';
 import Login from './Components/Login/Login';
 import BookingConsultation from './Components/BookingConsultation';
-
+import Notification from './Components/Notification/Notification';
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
           <Navbar/>
+          <Notification/>
           <Routes>
               <Route path="/" element={<Landing_Page/>}/>
               <Route path="/Sign_Up" element={<Sign_Up/>}/>

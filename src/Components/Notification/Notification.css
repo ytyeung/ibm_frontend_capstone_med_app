@@ -1,0 +1,42 @@
+.appointment-card{
+    background-color: rgba(72,142,247,1);
+    color: white;
+    border: 2px solid black;
+    width:100%;
+    margin-top:80px;
+    font-size:12px;
+    position: static;
+}
+
+.appointment-card .appointment-card__content{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.appointment-card .appointment-card__title{
+  font-size:16px;
+  margin-bottom: 10px;
+}
+
+.appointment-card .appointment-card__message{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+}
+
+@media (min-width: 1280px) {
+    .appointment-card{
+        width:250px;
+        top: 80px;
+        right: 20px;
+        font-size:12px;
+        position: absolute;
+      }
+      .appointment-card .appointment-card__message{
+        list-style: none;
+        display: grid;
+    }
+}

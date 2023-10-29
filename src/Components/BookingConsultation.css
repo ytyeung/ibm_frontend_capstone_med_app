@@ -14,7 +14,7 @@
     top: 350px;
     max-width: 1024px;
     width: 100%;
-    position: absolute;
+    position: static;
     z-index: -2;
     margin-left: auto;
     margin-right: auto;

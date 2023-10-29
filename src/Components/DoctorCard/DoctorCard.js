@@ -7,6 +7,14 @@ import { v4 as uuidv4 } from 'uuid';
 const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
     const [showModal, setShowModal] = useState(false);
     const [appointments, setAppointments] = useState([]);
+    useEffect(() => {
+        const storedAppointmentData = JSON.parse(localStorage.getItem(name));
+        if (storedAppointmentData) {
+          const updatedAppointments = [...appointments, storedAppointmentData];
+          setAppointments(updatedAppointments);
+        }
+
+      }, []);
 
     const handleBooking = () => {
         setShowModal(true);
@@ -15,6 +23,11 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
     const handleCancel = (appointmentId) => {
         const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
         setAppointments(updatedAppointments);
+
+        localStorage.removeItem('doctorData');
+        localStorage.removeItem(name);
+
+        window.location.reload();
       };
 
     const handleFormSubmit = (appointmentData) => {
@@ -25,6 +38,14 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
         const updatedAppointments = [...appointments, newAppointment];
         setAppointments(updatedAppointments);
         setShowModal(false);
+
+        let doctorData = {'name': name, 'speciality': speciality};
+
+        localStorage.setItem('doctorData',JSON.stringify(doctorData));
+        localStorage.setItem(name,JSON.stringify(newAppointment));
+
+        window.location.reload();
+
       };
 
   return (
