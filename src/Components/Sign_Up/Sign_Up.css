@@ -174,8 +174,14 @@
 .SignUpPane{
     width: 480px;
     height: 640px;
-    top:20px;
-    left:20px;
+    margin-top:20px;
+    margin-left:20px;
     position: absolute;
     z-index:-1;
+}
+
+@media (min-width: 1280px) {
+    .SignUpPane{
+        margin-top: 80px;
+    }
 }

@@ -24,15 +24,30 @@
 .appointment-card .appointment-card__message{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     padding: 0px;
+}
+
+.appointment-card .appointment-card__message li{
+    min-width: 250px;
+}
+@media (max-width: 1024px) {
+    .appointment-card{
+        margin-top:55px;
+      }   
+}
+@media (max-width: 768px) {
+    .appointment-card{
+        margin-top:80px;
+      }   
 }
 
 @media (min-width: 1280px) {
     .appointment-card{
         width:250px;
-        top: 80px;
         right: 20px;
         font-size:12px;
+        top:0px;
         position: absolute;
       }
       .appointment-card .appointment-card__message{

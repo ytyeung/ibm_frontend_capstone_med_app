@@ -71,7 +71,7 @@ const Sign_Up = () => {
 
 
     return(
-      <div className="SignUpPane" style={{marginTop:'5%'}}>
+      <div className="SignUpPane">
       {showerr && <div className="err" style={{ color: 'red' }}><ul>{displayError}</ul></div>}
       <div className="SignUpText">Sign Up</div>
       <div className="AlreadyAMemberLogin"><span className="alreadyamember">Already a member? <a href="/Login">Login</a></span></div>
