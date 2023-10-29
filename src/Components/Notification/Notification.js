@@ -8,7 +8,6 @@ const Notification = ({ children }) => {
   const [isShowNotification, setIsShowNotification] = useState(false);
 
   useEffect(() => {
-    sessionStorage.setItem('email',"a@a.com");
     const storedUsername = sessionStorage.getItem('email');
     const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
     const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData?.name));
