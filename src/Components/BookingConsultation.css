@@ -15,7 +15,6 @@
     max-width: 1024px;
     width: 100%;
     position: static;
-    z-index: -2;
     margin-left: auto;
     margin-right: auto;
 }

@@ -24,8 +24,20 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
         const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
         setAppointments(updatedAppointments);
 
-        localStorage.removeItem('doctorData');
-        localStorage.removeItem(name);
+        const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
+        const updatedDoctorData = storedDoctorData.filter((doctor) => doctor.name !== name);
+
+        if (updatedAppointments.length <=0){
+            localStorage.removeItem(name);
+        }else{
+            localStorage.setItem(name,JSON.stringify(updatedAppointments));
+        }
+
+        if (updatedDoctorData.length <=0){
+            localStorage.removeItem('doctorData');
+        }else{
+            localStorage.setItem('doctorData',JSON.stringify(updatedDoctorData));
+        }
 
         window.location.reload();
       };
