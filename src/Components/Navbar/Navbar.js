@@ -31,7 +31,7 @@ function Navbar(){
 
 <ul className="nav_links">
     <li className="link"><a href="/">Home</a></li>         
-    <li className="link"><a href="#">Reviews</a></li>
+    <li className="link"><a href="/Reviews">Reviews</a></li>
     <li className="link"><a href="/BookingConsultation">Appointments</a></li>
     <li className="link"><a href="#">Health Blog</a></li>
 </ul>

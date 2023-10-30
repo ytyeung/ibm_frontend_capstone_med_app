@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Notification.css';
-const Notification = ({ children }) => {
+const Notification = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState([]);
