@@ -31,6 +31,7 @@ const ReviewForm = ({ children }) => {
   return (
       <div className="ReviewFormPane">
         <div className="ReviewFormText">Reviews</div>
+        <center>
         <table className="ReviewFormTable">
           <thead>
             <tr>
@@ -42,11 +43,11 @@ const ReviewForm = ({ children }) => {
             </tr>
         </thead>
         <tbody>
-        {doctorData.map( doctor => (
+        {doctorData.map( (doctor,i) => (
             <tr key={doctor?.name}>
-                <td></td>
-                <td>{doctor?.name}</td>
-                <td>{doctor?.speciality}</td>
+                <td>{i++}</td>
+                <td style={{textAlign:'center'}}>{doctor?.name}</td>
+                <td style={{textAlign:'center'}}>{doctor?.speciality}</td>
                 <td></td>
                 <td></td>
 
@@ -55,6 +56,7 @@ const ReviewForm = ({ children }) => {
         </tbody>
       
       </table>
+      </center>
     </div>
   );
 };
