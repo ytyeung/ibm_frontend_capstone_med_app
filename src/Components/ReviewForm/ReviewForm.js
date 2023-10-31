@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ReviewForm.css';
 import Popup from 'reactjs-popup';
+import GiveReviews from '../GiveReviews/GiveReviews';
 
 const ReviewForm = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,31 +35,8 @@ const ReviewForm = ({ children }) => {
     }
   }, []);
 
-  const handleFormSubmit = (appointmentData) => {
-    const newAppointment = {
-      id: uuidv4(),
-      ...appointmentData,
-    };
-    const updatedAppointments = [...appointments, newAppointment];
-    setAppointments(updatedAppointments);
-    setShowModal(false);
-
-    const doctorData = {'name': name, 'speciality': speciality};
-    const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
-    let updatedDoctorData = [];
-
-    if (storedDoctorData){
-        if (!storedDoctorData.includes(doctorData)){
-            updatedDoctorData = [...storedDoctorData, doctorData];
-        }
-    }else{
-        updatedDoctorData =[doctorData];
-    }
-
-    localStorage.setItem('doctorData',JSON.stringify(updatedDoctorData));
-    localStorage.setItem(name,JSON.stringify(newAppointment));
-
-    window.location.reload();
+  const handleFormSubmit = (submittedMessage) => {
+ 
 
   };
 
@@ -77,22 +55,27 @@ const ReviewForm = ({ children }) => {
             </tr>
         </thead>
         <tbody>
-        {doctorData.map( (doctor) => (
+        {doctorData.map( (doctor,index) => (
             <tr key={doctor?.name}>
-                <td></td>
+                <td>{doctor?.id}</td>
                 <td style={{textAlign:'center'}}>{doctor?.name}</td>
                 <td style={{textAlign:'center'}}>{doctor?.speciality}</td>
-                <td>
+                <td style={{textAlign:'center'}}>
                     <Popup style={{ backgroundColor: '#FFFFFF'}}
                         trigger={
                         <button className="ReviewButton">
-                            Click Me
+                            Click Here
                         </button>
                         }
                         modal open={showModal} onClose={() => setShowModal(false)}>
                         
-                        {(close) => ( 
-                            <AppointmentForm onSubmit={handleFormSubmit} />
+                        {(close) => (
+                            <div className="doctorbg" style={{overflow: 'scroll' }}>
+                                <button className="close" onClick={close}>
+                                      &times;
+                                </button>
+                            <GiveReviews doctor={doctor} onSubmit={handleFormSubmit} />
+                            </div>
                         )}
                     </Popup>
                 </td>
