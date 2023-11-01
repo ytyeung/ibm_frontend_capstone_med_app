@@ -18,9 +18,9 @@ const GiveReviews = ({ doctor, onSubmit }) => {
         onSubmit({doctor, name, review, rating});
         setSubmittedMessage({"rating": rating, "review": review});
 
-        setName('');
-        setReview('');
-        setRating(0);
+        //setName('');
+        //setReview('');
+        //setRating(0);
     } else {
         setShowWarning(true);
     }
@@ -63,7 +63,7 @@ const GiveReviews = ({ doctor, onSubmit }) => {
                 <label htmlFor="rating">Rating:</label>
                 <StarRating/>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{submittedMessage !==null? "Update" : "Submit"}</button>
         </form>
 
 {submittedMessage && (
