@@ -89,3 +89,27 @@
 .star-rating .star{
     width:100px;
 }
+
+.doctorbg{
+    -webkit-scrollbar {
+      display: none;
+    };
+    width:320px;
+  }
+
+.doctorbg > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+    width:30px;
+    height:30px;
+    color: black;
+}

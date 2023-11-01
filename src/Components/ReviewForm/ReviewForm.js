@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './ReviewForm.css';
 import Popup from 'reactjs-popup';
 import GiveReviews from '../GiveReviews/GiveReviews';
 
 const ReviewForm = ({ children }) => {
+  const ref = useRef();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState([]);
   const [isShowReviewForm, setIsShowReviewForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+
 
   useEffect(() => {
     sessionStorage.setItem('email',"davidyeung@a.com");
@@ -69,13 +72,14 @@ const ReviewForm = ({ children }) => {
                 <td style={{textAlign:'center'}}>{doctor?.name}</td>
                 <td style={{textAlign:'center', maxWidth:'150px'}}>{doctor?.speciality}</td>
                 <td style={{textAlign:'center'}}>
-                    <Popup style={{ backgroundColor: '#FFFFFF'}}
+                    <Popup style={{ backgroundColor: '#f5f5f5'}}
+                        ref={ref}
                         trigger={
                         <button className="ReviewButton" disabled={doctor?.review}>
-                            Click Here
+                            {doctor?.review? "Reviewed" : "Click Here"}
                         </button>
                         }
-                        modal open={showModal} onClose={() => setShowModal(false)}>
+                        >
                         
                         {(close) => (
                             <div className="doctorbg" style={{overflow: 'scroll' }}>
