@@ -12,10 +12,6 @@ const Notification = () => {
 
     if (storedDoctorData){
         setDoctorData(storedDoctorData);
-        //const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData[1]?.name));
-        //if (storedAppointmentData) {
-        //   setAppointmentData(storedAppointmentData);
-        //}
     }
 
     if (storedUsername) {

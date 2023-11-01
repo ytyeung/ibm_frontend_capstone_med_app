@@ -11,6 +11,8 @@ const ReviewForm = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
+    sessionStorage.setItem('email',"davidyeung@a.com");
+
     const storedUsername = sessionStorage.getItem('email');
     let storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
 
@@ -19,10 +21,7 @@ const ReviewForm = ({ children }) => {
         storedDoctorData.forEach(element => {element.id = i++;});
 
         setDoctorData(storedDoctorData);
-        //const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData[1]?.name));
-        //if (storedAppointmentData) {
-        //   setAppointmentData(storedAppointmentData);
-        //}
+
     }
 
     if (storedUsername) {
@@ -36,6 +35,15 @@ const ReviewForm = ({ children }) => {
   }, []);
 
   const handleFormSubmit = (submittedMessage) => {
+    const updatedDoctorData = doctorData.map(doctor =>{
+        if (doctor.id === submittedMessage.doctor.id){
+            doctor.review = submittedMessage.review;
+            doctor.rating = submittedMessage.rating;
+        }
+        return doctor;
+    });
+    setDoctorData(updatedDoctorData);
+    setShowModal(false);
  
 
   };
@@ -55,15 +63,15 @@ const ReviewForm = ({ children }) => {
             </tr>
         </thead>
         <tbody>
-        {doctorData.map( (doctor,index) => (
-            <tr key={doctor?.name}>
-                <td>{doctor?.id}</td>
+        {isLoggedIn && doctorData.map( (doctor) => (
+            <tr key={doctor?.id}>
+                <td style={{textAlign:'center'}}>{doctor?.id}</td>
                 <td style={{textAlign:'center'}}>{doctor?.name}</td>
-                <td style={{textAlign:'center'}}>{doctor?.speciality}</td>
+                <td style={{textAlign:'center', maxWidth:'150px'}}>{doctor?.speciality}</td>
                 <td style={{textAlign:'center'}}>
                     <Popup style={{ backgroundColor: '#FFFFFF'}}
                         trigger={
-                        <button className="ReviewButton">
+                        <button className="ReviewButton" disabled={doctor?.review}>
                             Click Here
                         </button>
                         }
@@ -79,7 +87,7 @@ const ReviewForm = ({ children }) => {
                         )}
                     </Popup>
                 </td>
-                <td></td>
+                <td>{doctor?.review}</td>
 
             </tr>)
         )}

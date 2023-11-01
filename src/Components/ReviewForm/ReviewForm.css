@@ -21,12 +21,13 @@
 
 .ReviewFormTable{
   border-collapse: collapse;
+  table-layout: fixed;
+  max-width:700px;
 }
 
 .ReviewFormTable thead{
     background-color: rgba(200,200,200,0.3);
     color:rgba(20,20,20,1);
-    max-width:1024px;
     font-weight: 500;
     
 }
@@ -41,11 +42,17 @@
 
 .ReviewFormTable td{
     border-bottom: 1px solid rgba(150,150,150,1);
+    padding-right: 10px;
+    padding-left: 10px;
+    word-wrap: break-word;
 }
 
 .ReviewButton{
     margin-top: 5px;
     margin-bottom: 5px;
+}
+.ReviewButton:disabled{
+    background-color: gray;
 }
 
 .review-form {

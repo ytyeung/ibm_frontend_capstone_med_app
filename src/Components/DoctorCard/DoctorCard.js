@@ -88,7 +88,7 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
        <Popup
           style={{ backgroundColor: '#FFFFFF'}}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`}>
+            <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`} >
               {appointments.length > 0 ? (
                 <div>Cancel Appointment</div>
               ) : (
