@@ -77,7 +77,7 @@ const Sign_Up = () => {
       <div className="AlreadyAMemberLogin"><span className="alreadyamember">Already a member? <a href="/Login">Login</a></span></div>
       <form method="POST" onSubmit={register}>
       <div className="form_area">
-        <label className="label" htmlFor="role">Role</label>
+         
       <select id="role" required name="role" type="role" className="select-control" value={role} onChange={e => setRole(e.target.value)}>
         <option value="">Please Choose...</option>
         <option value="patient">Patient</option>

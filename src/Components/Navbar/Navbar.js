@@ -1,8 +1,15 @@
 import './Navbar.css'
+import {useRef} from 'react';
 import { redirect } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import ProfileCard from '../ProfileCard/ProfileCard';
 
 function Navbar(){
+    const ref = useRef();
     const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
+    //const isLogedOut=false;
+    //sessionStorage.setItem("email","peter@a.com");
+
 
     const logOutMe = () => {
         sessionStorage.removeItem("auth-token");
@@ -47,12 +54,22 @@ function Navbar(){
     </a>
 </div></div>) : (
     <div>
-    <div className="name_tag">Welcome, {name}</div>
+        <Popup style={{ backgroundColor: '#f5f5f5',zIndex:'2'}}
+            ref={ref}
+            trigger={
+                <div className="name_tag">Welcome, {name}</div>
+            }
+            >    
+            {(close) => (
+                <div className="profilebg"><ProfileCard /></div>      
+            )}
+        </Popup>
+    
     <div className="e26_461">
     <a href="/">
         <button className="ei26_461_1_6" onClick={logOutMe}>Logout</button>
     </a>
-</div>
+    </div>
 </div>
 )
 }
