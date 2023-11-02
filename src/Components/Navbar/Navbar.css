@@ -112,8 +112,8 @@
     -webkit-scrollbar {
       display: none;
     };
-    width:250px;
-    height:150px;
+    width:400px;
+    height:200px;
   }
 
 @media (max-width: 1024px) {

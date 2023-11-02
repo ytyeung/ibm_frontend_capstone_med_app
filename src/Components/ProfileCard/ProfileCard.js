@@ -100,28 +100,43 @@ const ProfileCard = () => {
     };
   
     return (
+        <div>
         <div className="profile-container">
         {editMode ? (
+            <div>
+            <center><h2>Edit Profile</h2></center>
             <form onSubmit={handleSubmit}>
-              <div className="form_area">
-                <label className="label" htmlFor="role">Email</label>
-                  <input type="email" name="email"
-                    value={userDetails.email}
-                    disabled // Disable the email field
-                />
-              </div>
-            //create above logic for name and phone from userDetails
-          <button type="submit">Save</button>
-        </form>   
+                <label className="label" htmlFor="email">Email</label>
+                    <input type="email" name="email"
+                      value={userDetails.email}
+                      disabled/>
+                <label className="label" htmlFor="name">Name</label>
+                    <input type="text" name="name"
+                      value={updatedDetails.name} onChange={handleInputChange}/>
+                <label className="label" htmlFor="phone">Phone</label>
+                    <input type="text" name="phone"
+                      value={updatedDetails.phone} onChange={handleInputChange}/>
+                <button type="submit">Save</button>
+            </form>
+            </div>
         ) : (
             <div className="profile-details">
-            <center><h2>Your Profile</h2></center>
-            // implement code to display detail of phone and email like above
-            <button onClick={handleEdit}>Edit</button>
+                <center><h2>Your Profile</h2></center>
+                <p> <b>Email:</b> {userDetails.email}</p>
+                <p> <b>Phone:</b> {userDetails.phone}</p>
+                <button onClick={handleEdit}>Edit</button>
             </div>
         )}
+            <div className="profile-details">
+                <center><h2>Your Reports</h2></center>
+                <a href="#">
+                    <button>Get Reports</button>
+                </a>
+            </div>
+        </div>
         </div>
         );
+
 };
 
 export default ProfileCard;

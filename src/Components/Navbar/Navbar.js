@@ -6,9 +6,9 @@ import ProfileCard from '../ProfileCard/ProfileCard';
 
 function Navbar(){
     const ref = useRef();
-    const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
-    //const isLogedOut=false;
-    //sessionStorage.setItem("email","peter@a.com");
+    //const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
+    const isLogedOut=false;
+    sessionStorage.setItem("email","peter@a.com");
 
 
     const logOutMe = () => {

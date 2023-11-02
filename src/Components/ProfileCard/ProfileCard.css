@@ -15,14 +15,17 @@
   .profile-container label {
     display: block;
     margin-bottom: 10px;
+    color: black;
   }
 
   .profile-container input[type="text"],
   .profile-container input[type="email"] {
+    display: block;
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10px;
   }
 
   .profile-container button {
@@ -39,6 +42,7 @@
     background-color: #fff;
     border-radius: 4px;
     padding: 20px;
+    margin-bottom:10px;
   }
 
   .profile-details h2 {
@@ -58,3 +62,12 @@
     padding: 8px 12px;
     cursor: pointer;
   }
+
+  .profile-details  a{
+    text-decoration:none;
+    color:white;
+}
+
+.profile-details  a:hover{
+    color:rgba(35,85,202, 1);
+}
