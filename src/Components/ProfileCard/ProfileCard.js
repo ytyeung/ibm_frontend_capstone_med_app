@@ -129,7 +129,7 @@ const ProfileCard = () => {
         )}
             <div className="profile-details">
                 <center><h2>Your Reports</h2></center>
-                <a href="#">
+                <a href="/ReportsLayout">
                     <button>Get Reports</button>
                 </a>
             </div>

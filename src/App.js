@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Reviews" element={<ReviewForm/>}/>
               <Route path="/BookingConsultation" element={<BookingConsultation/>} />
+              <Route path="/ReportsLayout" element={<ReportsLayout/>} />
           </Routes>
             
         </BrowserRouter>

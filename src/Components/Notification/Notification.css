@@ -48,7 +48,7 @@
         width:250px;
         right: 20px;
         font-size:12px;
-        top:0px;
+        bottom: 10px;
         position: absolute;
       }
       .appointment-card .appointment-card__message{

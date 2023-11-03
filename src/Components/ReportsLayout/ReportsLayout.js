@@ -30,8 +30,6 @@ const ReportsLayout = () => {
     if (storedUsername && storedDoctorData){
       setIsShowReportsLayout(true);
     }
-
-    setDoctorData(updatedDoctorData);
   }, []);
 
   return (
