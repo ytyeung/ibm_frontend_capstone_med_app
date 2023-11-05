@@ -9,7 +9,7 @@ const ReportsLayout = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    sessionStorage.setItem('email',"davidyeung@a.com");
+    //sessionStorage.setItem('email',"davidyeung@a.com");
 
     const storedUsername = sessionStorage.getItem('email');
     let storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
@@ -53,7 +53,7 @@ const ReportsLayout = () => {
                 <td style={{textAlign:'center'}}>{doctor?.name}</td>
                 <td style={{textAlign:'center'}}>{doctor?.speciality}</td>
                 <td style={{textAlign:'center'}}><button>View Reports</button></td>
-                <td><button> Download Reports</button></td>
+                <td><a href=""><button> Download Reports</button></a></td>
 
             </tr>)
         )}

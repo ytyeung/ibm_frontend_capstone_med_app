@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
+import Popup from 'reactjs-popup';
 import './ProfileCard.css';
 
 const ProfileCard = () => {
+    const ref = useRef();
     const [userDetails, setUserDetails] = useState({});
     const [updatedDetails, setUpdatedDetails] = useState({});
     const [editMode, setEditMode] = useState(false);
@@ -98,9 +100,15 @@ const ProfileCard = () => {
           // Handle error case
         }
     };
+
+    const toggleTooltip = () => ref.current.toggle();
   
     return (
         <div>
+        <div className="name_tag" onClick={toggleTooltip}>Welcome, {userDetails.name}</div>
+        <Popup style={{ backgroundColor: '#f5f5f5',zIndex:'2'}}
+            ref={ref}
+        >    
         <div className="profile-container">
         {editMode ? (
             <div>
@@ -134,7 +142,9 @@ const ProfileCard = () => {
                 </a>
             </div>
         </div>
+        </Popup>
         </div>
+        
         );
 
 };

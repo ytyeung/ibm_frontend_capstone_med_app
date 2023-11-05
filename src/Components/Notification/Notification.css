@@ -29,18 +29,36 @@
     margin-bottom: 10px;
 }
 
+.name_tag { 
+    right: 80px;
+    top: 10px;
+    position: absolute;
+}
+
 .appointment-card .appointment-card__message li{
     min-width: 250px;
 }
 @media (max-width: 1024px) {
     .appointment-card{
         margin-top:55px;
-      }   
+      } 
+    .name_tag { 
+        transform: scale(0.6,0.6);
+        right: 80px;
+        top: 10px;
+        position: absolute;
+    }  
 }
 @media (max-width: 768px) {
     .appointment-card{
         margin-top:80px;
-      }   
+      } 
+    .name_tag { 
+        transform: scale(0.6,0.6);
+        right: 80px;
+        top: 10px;
+        position: absolute;
+    } 
 }
 
 @media (min-width: 1280px) {
