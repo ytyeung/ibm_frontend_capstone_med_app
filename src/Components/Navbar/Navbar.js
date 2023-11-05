@@ -6,9 +6,7 @@ import ProfileCard from '../ProfileCard/ProfileCard';
 
 function Navbar(){
     const ref = useRef();
-    //const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
-    const isLogedOut=false;
-    sessionStorage.setItem("email","peter@a.com");
+    const isLogedOut=sessionStorage.getItem("auth-token") ? false : true;
 
 
     const logOutMe = () => {
@@ -25,6 +23,10 @@ function Navbar(){
     if (isLogedOut===false){
         name = sessionStorage.getItem("email").toString().split('@');
         name = name[0];
+    }
+
+    function handleNameUpdate(newValue){
+        document.getElementById("name_tag").innerHTML = "Welcome: "+newValue;
     }
 
     return(
@@ -57,11 +59,11 @@ function Navbar(){
         <Popup style={{ backgroundColor: '#f5f5f5',zIndex:'2'}}
             ref={ref}
             trigger={
-                <div className="name_tag">Welcome, {name}</div>
+                <div className="name_tag" id="name_tag">Welcome, {name}</div>
             }
             >    
             {(close) => (
-                <div className="profilebg"><ProfileCard /></div>      
+                <div className="profilebg"><ProfileCard changeName={handleNameUpdate}/></div>      
             )}
         </Popup>
     

@@ -3,7 +3,7 @@ import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
 import './ProfileCard.css';
 
-const ProfileCard = () => {
+const ProfileCard = ({changeName}) => {
     const [userDetails, setUserDetails] = useState({});
     const [updatedDetails, setUpdatedDetails] = useState({});
     const [editMode, setEditMode] = useState(false);
@@ -85,9 +85,10 @@ const ProfileCard = () => {
                 sessionStorage.setItem("name", updatedDetails.name);
                 sessionStorage.setItem("phone", updatedDetails.phone);
                 setUserDetails(updatedDetails);
+                changeName(updatedDetails.name);
                 setEditMode(false);
                 // Display success message to the user
-                alert(`Profile Updated Successfully!`);
+                setTimeout(() => {alert(`Profile Updated Successfully!`)},500);
                 navigate("/");
             } else {
                 // Handle error case
