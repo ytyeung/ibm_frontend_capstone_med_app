@@ -19,10 +19,11 @@ const Notification = () => {
       setUsername(storedUsername);
     }
 
-    if (storedUsername && storedDoctorData){
-      setIsShowNotification(true);
-    }
+    //if (storedUsername && storedDoctorData){
+    //  setIsShowNotification(true);
+    //}
   }, []);
+  
   return (
     <div>
       {isShowNotification && (

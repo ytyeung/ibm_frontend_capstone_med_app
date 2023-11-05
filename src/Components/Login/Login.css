@@ -156,7 +156,7 @@
 .LoginPane{
     width: 480px;
     height: 640px;
-    margin-top:20px;
+    margin-top:50px;
     margin-left:20px;
     position: static;
     z-index:-1;

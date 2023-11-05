@@ -21,8 +21,9 @@ function Navbar(){
     let name = "";
 
     if (isLogedOut===false){
-        name = sessionStorage.getItem("email").toString().split('@');
-        name = name[0];
+        //name = sessionStorage.getItem("email").toString().split('@');
+        //name = name[0];
+        name = sessionStorage.getItem("name");
     }
 
     function handleNameUpdate(newValue){

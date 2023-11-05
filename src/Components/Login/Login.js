@@ -28,7 +28,7 @@ const Login = () => {
     const json = await res.json();
     if (json.authtoken) {
       sessionStorage.setItem('auth-token', json.authtoken);
-  
+      sessionStorage.setItem('name', json.username.name);
       sessionStorage.setItem('email', email);
       navigate('/');
       window.location.reload();
