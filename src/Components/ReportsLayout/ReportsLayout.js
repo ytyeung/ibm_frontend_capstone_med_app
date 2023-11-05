@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import './ReportsLayout.css';
 import Popup from 'reactjs-popup';
+import { useNavigate } from "react-router-dom";
 
 const ReportsLayout = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -8,10 +9,16 @@ const ReportsLayout = () => {
   const [doctorData, setDoctorData] = useState([]);
   const [isShowReportsLayout, setIsShowReportsLayout] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedUsername = sessionStorage.getItem('email');
     let storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
+
+    const authtoken = sessionStorage.getItem("auth-token");
+    if (!authtoken) {
+      navigate("/login");
+    }
 
     if (storedDoctorData){
         let i=1;

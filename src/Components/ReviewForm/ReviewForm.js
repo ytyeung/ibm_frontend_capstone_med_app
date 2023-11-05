@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './ReviewForm.css';
 import Popup from 'reactjs-popup';
+import { useNavigate } from "react-router-dom";
 import GiveReviews from '../GiveReviews/GiveReviews';
 
 const ReviewForm = ({ children }) => {
@@ -10,10 +11,14 @@ const ReviewForm = ({ children }) => {
   const [doctorData, setDoctorData] = useState([]);
   const [isShowReviewForm, setIsShowReviewForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
-
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const authtoken = sessionStorage.getItem("auth-token");
+    if (!authtoken) {
+      navigate("/login");
+    }
+
     const storedUsername = sessionStorage.getItem('email');
     let storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
 
