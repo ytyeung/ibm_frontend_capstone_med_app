@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
 
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
@@ -80,4 +80,4 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     );
   };
 
-export default AppointmentForm
+export default AppointmentForm;
