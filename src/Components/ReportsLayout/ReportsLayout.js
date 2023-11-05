@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import './ReportsLayout.css';
+import Popup from 'reactjs-popup';
 
 const ReportsLayout = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -51,9 +52,28 @@ const ReportsLayout = () => {
             <tr key={doctor?.id}>
                 <td style={{textAlign:'center'}}>{doctor?.id}</td>
                 <td style={{textAlign:'center'}}>{doctor?.name}</td>
-                <td style={{textAlign:'center'}}>{doctor?.speciality}</td>
-                <td style={{textAlign:'center'}}><button>View Reports</button></td>
-                <td><a href=""><button> Download Reports</button></a></td>
+                <td style={{textAlign:'center',maxWidth:"150px"}}>{doctor?.speciality}</td>
+                <td style={{textAlign:'center'}}>
+                <Popup style={{ backgroundColor: '#f5f5f5',zIndex:'2'}}
+                    trigger={
+                        <button>View Reports</button>
+                    }
+                    modal
+                    open={showModal}
+                    onClose={() => setShowModal(false)}
+                >    
+                {(close) => (
+                    <div className="pdfbg">
+                    <button className="close" onClick={close}>
+                        &times;
+                    </button>
+                    <object className="pdf-area"data="StayHealthyReportMod.pdf"></object> 
+                    </div>
+                )}
+                </Popup>
+                
+                </td>
+                <td><a href="StayHealthyReportMod.pdf"><button> Download Reports</button></a></td>
 
             </tr>)
         )}
