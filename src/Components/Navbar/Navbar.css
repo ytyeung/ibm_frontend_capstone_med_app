@@ -7,6 +7,7 @@
 	top:0px;
     display: flex;
     z-index:99;
+    margin-bottom: 10px;
 }
 
 .doctor_svg{

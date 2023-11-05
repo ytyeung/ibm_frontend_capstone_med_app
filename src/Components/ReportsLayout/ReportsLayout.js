@@ -88,6 +88,6 @@ const ReportsLayout = () => {
       </center>
     </div>
   );
-};
+}
 
 export default ReportsLayout;

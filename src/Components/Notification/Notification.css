@@ -60,6 +60,10 @@
     .appointment-card{
         margin-top:55px;
       } 
+    .appointment-card > .close {
+        right: 5px;
+        top: 60px;
+    }
     .name_tag { 
         transform: scale(0.6,0.6);
         right: 80px;
@@ -71,6 +75,10 @@
     .appointment-card{
         margin-top:80px;
       } 
+    .appointment-card > .close {
+        right: 5px;
+        top: 85px;
+    }
     .name_tag { 
         transform: scale(0.6,0.6);
         right: 80px;
@@ -79,7 +87,7 @@
     } 
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .appointment-card{
         width:250px;
         right: 20px;

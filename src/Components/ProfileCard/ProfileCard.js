@@ -106,7 +106,7 @@ const ProfileCard = ({changeName}) => {
         {editMode ? (
             <div>
             <center><h2>Edit Profile</h2></center>
-            <form onSubmit={handleSubmit}>
+            <form name="editProfile" onSubmit={handleSubmit}>
                 <label className="label" htmlFor="email">Email</label>
                     <input type="email" name="email"
                       value={userDetails.email}

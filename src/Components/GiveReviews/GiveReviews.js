@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  React,  {useState } from 'react';
 
 const GiveReviews = ({ doctor, onSubmit }) => {
   const [submittedMessage, setSubmittedMessage] = useState(null);
@@ -10,7 +10,6 @@ const GiveReviews = ({ doctor, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     if (name && review && rating > 0) {
         setShowWarning(false);
@@ -48,7 +47,7 @@ const GiveReviews = ({ doctor, onSubmit }) => {
 
   return (
         <div className="review-form">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} name="GiveReview">
           <h2>Give Your Feedback</h2>
             {showWarning && <p className="warning">Please fill out all fields.</p>}
             <div>
@@ -60,8 +59,8 @@ const GiveReviews = ({ doctor, onSubmit }) => {
                 <textarea id="review" name="review" value={review} onChange={e => setReview(e.target.value)} />
             </div>
             <div>
-                <label htmlFor="rating">Rating:</label>
-                <StarRating/>
+                <label>Rating:</label>
+                <StarRating />
             </div>
             <button type="submit">{submittedMessage !==null? "Update" : "Submit"}</button>
         </form>

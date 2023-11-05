@@ -104,7 +104,7 @@ const ReviewForm = ({ children }) => {
       </center>
     </div>
   );
-};
+}
 
 
 export default ReviewForm;

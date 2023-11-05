@@ -180,7 +180,7 @@
     z-index:-1;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .SignUpPane{
         margin-top: 80px;
     }

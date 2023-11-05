@@ -26,13 +26,12 @@ const Notification = () => {
 
   function closeNotification() { 
 	document.getElementById("appointment-card").style.display="none"; 
-}
+  }
   
   return (
     <div>
       {isShowNotification && (
         <>
-        
           <div className="appointment-card" id="appointment-card">
             <button className="close" onClick={closeNotification}>&times;</button>
             <div className="appointment-card__content">
@@ -47,18 +46,18 @@ const Notification = () => {
                          <li><strong>Phone Number:</strong> {storedAppointmentData?.phoneNumber}</li>
                          <li><strong>Date of Appointment:</strong> {storedAppointmentData?.selectedDate}</li>
                          <li><strong>Time Slot:</strong> {storedAppointmentData?.selectedSlot}</li>
-                    </ul>)
+                    </ul>);
                   }
-                    
                   )
                   }
 
             </div>
           </div>
         </>
-      )}
+      )
+      }
     </div>
   );
-};
+}
 
 export default Notification;

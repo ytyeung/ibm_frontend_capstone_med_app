@@ -31,7 +31,7 @@ const BookingConsultation = () => {
                 setFilteredDoctors(filtered);
                 
                 setIsSearched(true);
-                window.reload()
+                //window.location.reload()
             } else {
                 setFilteredDoctors([]);
                 setIsSearched(false);
@@ -82,7 +82,7 @@ const BookingConsultation = () => {
             </div>
         </div>
         </center>
-    )
+    );
 }
 
-export default BookingConsultation
+export default BookingConsultation;

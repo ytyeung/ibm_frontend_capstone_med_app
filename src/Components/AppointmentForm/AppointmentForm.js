@@ -3,8 +3,8 @@ import React, { useState,useEffect } from 'react';
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [selectedSlot, setSelectedSlot] = useState(null);
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedSlot, setSelectedSlot] = useState('');
+    const [selectedDate, setSelectedDate] = useState('');
 
     useEffect(() => {
         const storedUsername = sessionStorage.getItem('name');
@@ -32,7 +32,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     };
   
     return (
-      <form onSubmit={handleFormSubmit} className="appointment-form">
+      <form name="AppointmentForm" onSubmit={handleFormSubmit} className="appointment-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
