@@ -10,8 +10,6 @@ const ReportsLayout = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    //sessionStorage.setItem('email',"davidyeung@a.com");
-
     const storedUsername = sessionStorage.getItem('email');
     let storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
 

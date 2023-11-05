@@ -29,6 +29,7 @@ const Login = () => {
     if (json.authtoken) {
       sessionStorage.setItem('auth-token', json.authtoken);
       sessionStorage.setItem('name', json.username.name);
+      sessionStorage.setItem('phone', json.username.phone);
       sessionStorage.setItem('email', email);
       navigate('/');
       window.location.reload();

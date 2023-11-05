@@ -38,6 +38,24 @@
 .appointment-card .appointment-card__message li{
     min-width: 250px;
 }
+
+.appointment-card > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+    width:30px;
+    height:30px;
+    color: black;
+}
+
 @media (max-width: 1024px) {
     .appointment-card{
         margin-top:55px;

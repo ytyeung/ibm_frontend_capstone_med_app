@@ -19,16 +19,22 @@ const Notification = () => {
       setUsername(storedUsername);
     }
 
-    //if (storedUsername && storedDoctorData){
-    //  setIsShowNotification(true);
-    //}
+    if (storedUsername && storedDoctorData){
+      setIsShowNotification(true);
+    }
   }, []);
+
+  function closeNotification() { 
+	document.getElementById("appointment-card").style.display="none"; 
+}
   
   return (
     <div>
       {isShowNotification && (
         <>
-          <div className="appointment-card">
+        
+          <div className="appointment-card" id="appointment-card">
+            <button className="close" onClick={closeNotification}>&times;</button>
             <div className="appointment-card__content">
               <h3 className="appointment-card__title">Appointment Details</h3>
                   {doctorData.map( doctor => {

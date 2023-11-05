@@ -12,11 +12,12 @@ const FindDoctorSearch = () => {
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
     const navigate = useNavigate();
+
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
         setDoctorResultHidden(true);
         navigate(`/BookingConsultation?speciality=${speciality}`);
-        window.location.reload();
+        //window.location.reload();
     }
     return (
         <div className='finddoctor'>

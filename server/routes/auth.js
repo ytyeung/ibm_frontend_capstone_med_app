@@ -108,7 +108,8 @@ router.post('/login', [
                 }
 
                 const username = {
-                    name: theUser.name
+                    name: theUser.name,
+                    phone: theUser.phone
                 };
 
                 const authtoken = jwt.sign(payload, JWT_SECRET);

@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [selectedSlot, setSelectedSlot] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
+
+    useEffect(() => {
+        const storedUsername = sessionStorage.getItem('name');
+        const storedPhoneNumber = sessionStorage.getItem('phone');
+        if (storedUsername){
+            setName(storedUsername);
+        }
+        if (storedPhoneNumber){
+            setPhoneNumber(storedPhoneNumber);
+        }
+        
+    }, []);
   
     const handleSlotSelection = (slot) => {
       setSelectedSlot(slot);
