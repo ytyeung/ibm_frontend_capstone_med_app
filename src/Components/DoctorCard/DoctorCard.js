@@ -39,7 +39,7 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
             localStorage.setItem('doctorData',JSON.stringify(updatedDoctorData));
         }
 
-        window.location.reload();
+        //window.location.reload();
       };
 
     const handleFormSubmit = (appointmentData) => {
@@ -66,7 +66,7 @@ const DoctorCard = ({name, speciality, experience, ratings, profilePic }) => {
         localStorage.setItem('doctorData',JSON.stringify(updatedDoctorData));
         localStorage.setItem(name,JSON.stringify(newAppointment));
 
-        window.location.reload();
+        //window.location.reload();
 
       };
 
