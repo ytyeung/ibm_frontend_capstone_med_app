@@ -5,6 +5,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [selectedSlot, setSelectedSlot] = useState('');
     const [selectedDate, setSelectedDate] = useState('');
+    const [instantConsult, setInstantConsult] = useState(false);
 
     useEffect(() => {
         const storedUsername = sessionStorage.getItem('name');
@@ -24,7 +25,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
   
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber, selectedDate, selectedSlot});
+      onSubmit({ name, phoneNumber, selectedDate, selectedSlot, instantConsult});
       setName('');
       setPhoneNumber('');
       setSelectedSlot(null);
@@ -54,6 +55,12 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
           />
         </div>
         <div className="form-group">
+        <input type="checkbox" id="consultInstantCheck" 
+          style={{width:"20px"}} checked={instantConsult} onChange={e => setInstantConsult(e.target.checked)} />
+          <span class="checkLabel">Consult Instantly</span>
+        </div>
+        {instantConsult === false && (<div id="booking">
+        <div className="form-group">
           <label htmlFor="appointmentDate">Date of Appointment:</label>
           <input
             type="date"
@@ -75,6 +82,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
             <option value="4pm">4 pm</option>
           </select>
         </div>
+        </div>)}
         <button type="submit">Book Now</button>
       </form>
     );
