@@ -78,7 +78,7 @@ const ReportsLayout = () => {
                 </Popup>
                 
                 </td>
-                <td><a href="StayHealthyReportMod.pdf"><button> Download Reports</button></a></td>
+                <td><a href="StayHealthyReportMod.pdf" download><button> Download Reports</button></a></td>
 
             </tr>)
         )}
